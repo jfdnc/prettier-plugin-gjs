@@ -1,0 +1,27 @@
+{
+  "name": "prettier-plugin-gjs",
+  "version": "0.0.0",
+  "description": "A prettier formatter for template imports in .gjs",
+  "main": "index.js",
+  "repository": "",
+  "author": "Jacob Durham <jfdurham88@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "files": [
+    "index.js",
+    "lib/**/*"
+  ],
+  "scripts": {
+    "test": "mocha -r esm"
+  },
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "esm": "^3.2.25",
+    "mocha": "^7.1.1",
+    "prettier": "^2.7.1"
+  },
+  "volta": {
+    "node": "12.10.0",
+    "yarn": "1.22.4"
+  }
+}
