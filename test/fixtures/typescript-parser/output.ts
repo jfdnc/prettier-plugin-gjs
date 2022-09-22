@@ -1,3 +1,4 @@
+// TODO(jdurham): NOT AUDITED
 import Component, { tracked, hbs } from '@glimmerx/component';
 import { helper } from '@glimmerx/helper';
 import OtherComponent from './OtherComponent';

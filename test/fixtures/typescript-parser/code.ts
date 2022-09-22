@@ -35,6 +35,7 @@ class MyComponent extends Component {
 
   #somePrivate() {}
 
+  // TODO(jdurham): NOT AUDITED
   constructor(...args) {
     // @tsignore
     super(...args);

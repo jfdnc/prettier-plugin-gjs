@@ -1,3 +1,4 @@
+// TODO(jdurham): NOT AUDITED
 import Component, { hbs } from '@glimmerx/component';
 
 /**
