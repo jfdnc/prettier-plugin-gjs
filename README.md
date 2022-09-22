@@ -4,6 +4,8 @@
 
 [Prettier](https://prettier.io/docs/en/index.html) is an opinionated code formatter. Prettier does not support the experimental syntax (similar to `.tsx`) that `.gjs` components are authored in.
 
+This plugin was forked from and is heavily based on [`@glimmerx/prettier-plugin-component-templates`](https://github.com/glimmerjs/glimmer-experimental/tree/master/packages/%40glimmerx/prettier-plugin-component-templates).
+
 ## Introduction
 
 This plugin extends the internal printers to handle `.gjs` syntax (usage of `<template>` syntax alongside familiar `.js` and `.ts` syntax).
