@@ -2,19 +2,19 @@
 
 ## Background
 
-[Prettier](https://prettier.io/docs/en/index.html) is an opinionated code formatter. In Prettier `>2.0` there is support for `*.hbs` glimmer files, but does not support the experimental syntaxes that `glimmerx` components are authored in.
+[Prettier](https://prettier.io/docs/en/index.html) is an opinionated code formatter. Prettier does not support the experimental syntax (similar to `.tsx`) that `.gjs` components are authored in.
 
 ## Introduction
 
-This plugin extends the internal printers to add an embedded syntax for glimmer template in an `hbs` TaggedTemplateExpressions.
+This plugin extends the internal printers to handle `.gjs` syntax (usage of `<template>` syntax alongside familiar `.js` and `.ts` syntax).
 
 ## Installation and Usage
 
 ```bash
-yarn add -D @glimmerx/prettier-plugin-component-templates
+yarn add -D <TODO(jdurham): identifier of wherever this ends up>
 ```
 
-Once added prettier will discover and use the plugin to format any `hbs` tagged template expression.
+Once added prettier will discover and use the plugin to format any `.gjs` tagged template expression.
 
 ### Options
 
@@ -57,7 +57,3 @@ node node_modules/.bin/prettier --ignore-path --config=./test/fixtures/simple-fo
 ```
 yarn test
 ```
-
-## TODO
-
-- [ ] Add support for `<template>` tag semantics.
