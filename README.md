@@ -1,4 +1,4 @@
-# @glimmerx/prettier-plugin-component-templates
+# @glimmerx/prettier-plugin-gjs
 
 ## Background
 
