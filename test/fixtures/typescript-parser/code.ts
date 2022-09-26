@@ -1,4 +1,4 @@
-import Component, { tracked, hbs } from '@glimmerx/component';
+import Component, { tracked } from '@glimmerx/component';
 import { helper } from '@glimmerx/helper';
 import OtherComponent from './OtherComponent';
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
@@ -25,24 +25,23 @@ const isCJK = helper(function (_args, _hash, { services }) {
 });
 
 // Should not wrap
-const TemplateOnlyComponent = hbs`<h1>I am rendered by a template only component: {{@name}}</h1>`;
+const TemplateOnlyComponent = <template><h1>I am rendered by a template only component: {{@name}}</h1></template>
 
 // Should wrap
-const AnotherTemplateOnlyComponent = hbs`<h1>I am rendered by a template only component: {{@name}}</h1>`;
+const AnotherTemplateOnlyComponent = <template><h1>I am rendered by a template only component: {{@name}}</template>
 
 class MyComponent extends Component {
   // @tsignore
 
   #somePrivate() {}
 
-  // TODO(jdurham): NOT AUDITED
   constructor(...args) {
     // @tsignore
     super(...args);
     this.#somePrivate(); // Write me!
   }
 
-  static template = hbs`
+  static template = <template>
 <h1>Hello {{this.message}}</h1> <br/>
     {{myHelper "foo" greeting="Hello"}}
     <p>Current locale: {{this.currentLocale}}</p>
@@ -62,7 +61,7 @@ class MyComponent extends Component {
     <button {{on "click" this.increment}}>Increment</button>
     <TemplateOnlyComponent @name="For Glimmerx"/>
     <ButtonList/>
-  `;
+  </template>
 
   message = 'hello world';
   @tracked count = 55;

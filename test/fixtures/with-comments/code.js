@@ -1,5 +1,4 @@
-// TODO(jdurham): NOT AUDITED
-import Component, { hbs } from '@glimmerx/component';
+import Component from '@glimmerx/component';
 
 /**
  * @class HelloWorld
@@ -18,13 +17,13 @@ export default class HelloWorld extends Component {
     super(...args);
     this.#somePrivate(); // Write me!
   }
-  static template = hbs`
+  static template = <template>
   <Local>
 <:head>
 <div>Hello {{name}}</div>
    </:head>
   </Local>
-`;
+</template>
   /**
    * @returns { String } name;
    */
