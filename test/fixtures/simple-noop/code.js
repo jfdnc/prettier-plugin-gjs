@@ -16,7 +16,6 @@ const HardlineText = <template>
 // const InlineTagWrappedText = <template><h1>Hello World</h1></template>
 const InlineTagWrappedText = <template><h1>Hello World</h1></template>
 
-
 // const HardlineTagText = <template>
 //   <h1>
 //     Hello World
@@ -32,9 +31,9 @@ const HardlineTagText = <template>
 export default class Simple extends Component {
   <template>
     <NoText />
-      <InlineText />
-        <HardlineText />
-          <InlineTagWrappedText />
-            <HardlineTagText />
+    <InlineText />
+    <HardlineText />
+    <InlineTagWrappedText />
+    <HardlineTagText />
   </template>
 }
