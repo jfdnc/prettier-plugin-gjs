@@ -1,11 +1,10 @@
-// TODO(jdurham): NOT AUDITED
 import fs from 'fs';
 import prettier from 'prettier';
 import path from 'path';
 import { expect } from 'chai';
 
 describe('integration', function () {
-  this.timeout(3000); // Adjust timeout for slow? test.
+  this.timeout(3000);
 
   const defaults = { extension: '.js', message: 'should match snapshot' };
   function transform(testKey, options = {}) {
@@ -34,27 +33,26 @@ describe('integration', function () {
   });
 
   it('simple-formatted', () => {
-    transform('simple-formatted', { message: 'should format the simply templates' });
+    transform('simple-formatted', { message: 'should format simple templates' });
   });
 
   it('nested-html', () => {
-    // Should produce formatted output where first dom node is inset with one indentation further in.
-    transform('nested-html');
+    transform('nested-html', { message: 'should format multiple nested indent levels'});
   });
 
   it('options.hbsSingleQuote', () => {
-    transform('options-hbs-single-quote');
+    transform('options-hbs-single-quote', { message: 'should format single quotes option'});
   });
 
   it('with comments', () => {
-    transform('with-comments');
+    transform('with-comments', { message: 'should handle various comments correctly'});
   });
 
   it('extension .gjs', () => {
-    transform('extension-gjs', { extension: '.gjs' });
+    transform('extension-gjs', { extension: '.gjs', message: 'should handle `.gjs` file containing `.hbs` syntax in template markup' });
   });
 
   it('typescript parser', () => {
-    transform('typescript-parser', { extension: '.ts' });
+    transform('typescript-parser', { extension: '.ts', message: 'should handle `.hbs` file' });
   });
 });
