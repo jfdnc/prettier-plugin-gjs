@@ -1,6 +1,7 @@
 // TODO(jdurham): NOT AUDITED
 const babelParsers = require('prettier/parser-babel').parsers;
 const typescriptParsers = require('prettier/parser-typescript').parsers;
+const { preprocessEmbeddedTemplates } = require('ember-template-imports/lib/preprocess-embedded-templates');
 
 const { esTree } = require('./lib/util');
 
